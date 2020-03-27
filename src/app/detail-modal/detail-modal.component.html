@@ -1,0 +1,71 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+
+  <mat-dialog-content *ngIf="movie" class="mat-typography">
+    <div class="modal background-image" [ngStyle]="{'background-image': 'url(' + backphoto + ')'}">
+    </div>
+
+    <div class="title" >
+      <h1>{{ movie.title }}</h1>
+      <h2> {{ movie.overview }} </h2>
+    </div>
+
+    <div class="data" >
+      <!-- <h2>Sinopse</h2> -->
+      <div class="poster">
+        <img src="{{ posterphoto }}">
+      </div>
+
+      <!-- <h2> Genres</h2> -->
+      <div class="list ">
+        <div class="lists">
+          <mat-chip-list class="genre"  tabIndex="-1">
+            <mat-icon> theaters </mat-icon>
+            <mat-chip *ngIf="movie.adult" color="warn" selected >+18</mat-chip>
+            <mat-chip *ngFor="let genre of movie.genres"  >{{ genre.name }}</mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <!-- <h2>Language</h2> -->
+        <div class="lists"  >
+          <mat-chip-list class="language" tabIndex="-1">
+            <mat-icon> language </mat-icon>
+            <mat-chip  > {{ movie.original_language }} </mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <!-- <h2>Duration</h2> -->
+        <div class="lists" >
+          <mat-chip-list  tabIndex="-1">
+            <mat-icon> access_time </mat-icon>
+            <mat-chip  > {{ movie.runtime }} min</mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <!-- <h2>Votes</h2> -->
+        <div class="lists" >
+          <mat-chip-list  tabIndex="-1">
+            <mat-icon> grade </mat-icon>
+            <mat-chip > {{ movie.vote_average }} </mat-chip>
+          </mat-chip-list>
+        </div>
+
+
+        <!-- <h2>Popularity</h2> -->
+        <div class="lists">
+          <mat-chip-list  tabIndex="-1">
+            <mat-icon> trending_up </mat-icon>
+            <mat-chip > {{ movie.popularity }} </mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <!-- <h2>Release Date</h2> -->
+        <div class="lists">
+          <mat-chip-list  tabIndex="-1">
+            <mat-icon> date_range </mat-icon>
+            <mat-chip > {{ release | date: 'yyyy/MM/dd' }} </mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+</section>

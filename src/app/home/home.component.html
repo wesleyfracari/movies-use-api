@@ -1,0 +1,8 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div class="grid" id="grid">
+    <div class="item background-image" [ngStyle]="{'background-image': 'url(' + popular.posterMovie + ')'}"  *ngFor="let popular of popular" (click)="openModal(popular.id)"> 
+    </div>
+  </div>
+  <mat-paginator *ngIf="popular" showFirstLastButtons hidePageSize [length]="length" [pageSize]="pageSize">
+  </mat-paginator>
+</section>

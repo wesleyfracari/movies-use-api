@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  grid-gap: 10px;
+}
+
+.item {
+  transition: transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  height: 370px;
+  opacity: 0.5;
+  &:hover {
+    -webkit-transform: scale(1.11);
+    -ms-transform: scale(1.11);
+    transform: scale(1.11);
+    box-shadow: -7px -5px 5px 0px rgba(0, 0, 0, 0.75);
+    opacity: 1;
+  }
+}
+
+.background-image {
+  background-size: cover;
+}
+
+mat-paginator {
+  background-color: rgb(66, 66, 66);
+}

@@ -1,0 +1,61 @@
+.mat-typography {
+  * {
+    color: white;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 300px;
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 17px;
+  margin: 10px 0 0 0;
+  text-align: justify;
+}
+.poster {
+  margin-right: 15px;
+  img {
+    object-fit: cover;
+    height: 320px;
+    width: 220px;
+  }
+}
+
+// @media (min-width: 320px) and (max-width: 768px) {
+//   .poster {
+//     min-width: 220px;
+//     width: 100%;
+//   }
+//   .lists {
+//   }
+// }
